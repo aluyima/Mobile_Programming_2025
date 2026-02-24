@@ -20,9 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             NdejjeWelcomeAppTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
+                    GreetingCard(name = "Alex", modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
@@ -31,7 +29,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
+fun GreetingCard(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -42,6 +40,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     NdejjeWelcomeAppTheme {
-        Greeting("Android")
+        GreetingCard("Alex")
     }
 }
